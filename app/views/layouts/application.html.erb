@@ -2,31 +2,18 @@
 <html>
 <head>
   <title>Arrest</title>
-  
   <%= stylesheet_link_tag    'http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css', 'data-turbolinks-track' => true %>
-
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'http://tablesorter.com/__jquery.tablesorter.min.js' %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+
   <div class="container">
     <%= render "layouts/nav" %>
   </div> <!-- container -->
-  
 
  <%= yield %> 
-
- <script type="text/javascript">
-
-    $(document).ready(function() { 
-      // $("#myTable").tablesorter(); 
-    }); 
-    
-   </script>
-
-
 </body>
 </html>
