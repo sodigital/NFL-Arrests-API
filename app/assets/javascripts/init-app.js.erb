@@ -32,14 +32,17 @@ $(function(){
 
 
     function fetchQueryResults(q){
+     
        if(q == ''){
-         var url = "/query"
+         var url = "<%= ENV['api_root_url'] %>http://sd.dev:3007/query"
        } else {
-        var url =  "/query?q="+q
+        var url =  "http://sd.dev:3007/query?q="+q
        }
+
       $.get(url , function( data ) {    
         renderResults(data)
       });
+    
     }  
 
 
@@ -55,8 +58,6 @@ $(function(){
     } else {
       fetchQueryResults("")
     }
-
-  
 
 
 
