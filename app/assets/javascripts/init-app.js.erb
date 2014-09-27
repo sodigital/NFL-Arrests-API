@@ -7,7 +7,7 @@ $(function(){
         var term = $(this).val();
          fetchQueryResults(  term  )
          if (term){
-           history.pushState({id: null}, '', '#'+term);
+           history.pushState({id: null}, '', '#'+term.replace(" ","-"));
          } 
       });
 
