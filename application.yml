@@ -1,0 +1,5 @@
+defaults: &defaults
+development:
+  api_root_url: 'http://sd.dev:3007'
+production:
+  api_root_url: '/'
