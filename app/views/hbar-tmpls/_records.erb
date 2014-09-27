@@ -1,0 +1,38 @@
+
+
+<input type="text" class="typeahead"  placeholder="You can search by any attribute below. Results update as you type." >
+<script id="some-template" type="text/x-handlebars-template">
+
+  <table id="myTable" class="table table-striped"   >
+    <thead>
+      <div class="small-font">You can click a head to sort ASC or DESC</div>
+      <th>date</th>
+      <th>team</th>
+      <th>name</th>
+      <th>pos</th>
+      <th>case</th>
+      <th>category</th>
+      <th>desc</th>
+      <th>outcome</th>
+      <th>Count : {{records.length}}</th>
+ 
+    </thead>
+    <tbody>
+      {{#records}}
+        <tr>
+          <td>{{date}}</td>
+          <td>{{team}}</td>
+          <td>{{name}}</td>
+          <td>{{pos}}</td>
+          <td>{{arest_or_charge}}</td>
+          <td>{{category}}</td>
+          <td>{{description}}</td>
+          <td>{{outcome}}</td>
+          <td> </td>
+ 
+        </tr>
+      {{/records}}
+    </tbody>
+  </table>
+</script>
+<div id="content-placeholder">&nbsp;</div>

@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date: 2014-09-24
+  team: MyString
+  name: MyString
+  pos: MyString
+  case: MyString
+  category: MyString
+  description: MyString
+  outcome: MyString
+
+two:
+  date: 2014-09-24
+  team: MyString
+  name: MyString
+  pos: MyString
+  case: MyString
+  category: MyString
+  description: MyString
+  outcome: MyString

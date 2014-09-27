@@ -1,0 +1,72 @@
+
+body {
+  margin-bottom: 100px;
+}
+
+th {
+  cursor: pointer;
+}
+
+th.headerSortDown {
+  cursor: pointer;
+  color:white;
+  background:black;
+}
+
+.typeahead {
+  display: none;
+  height: 66px;
+  width:500px;
+  text-indent: 10px;
+  margin-top: 25px;
+}
+
+.retina-logo {
+  max-width:100px;
+  margin: 25px auto 0 auto ;
+}
+
+span.tag {
+  display: block;
+  color: #666;
+  font-size: 11px;
+}
+
+
+.nav {
+  line-height: 80px;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding-bottom: -8px;
+  border-bottom: 1px solid rgba(200,200,200,.35);
+  margin: 0 0 25px -40px;
+
+}
+
+.nav ul { display: inline;margin:0;}
+.nav ul li { list-style: none;display: inline;margin-right:50px;}
+.nav .active-nav {
+  text-decoration: underline;
+  color:#CCC;
+}
+
+
+
+
+.terminal {
+  background-color: #444;
+  color: #fff;
+  border-radius: 3px;
+  border: none;
+  position: relative;
+}
+
+.disclaimer {
+  font-size: 10px;
+  color:#666;  
+}
+
+.black-bg {
+  background: black;
+  color: white;
+}
