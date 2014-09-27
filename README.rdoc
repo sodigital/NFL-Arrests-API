@@ -1,28 +1,18 @@
-== README
+To get up to speed you need to
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+1) db:migrate
+2) run the seed command: rake arrests:seed_arrests
+3) Setup your dev host in your init-app, by default it will use / port 80
 
-Things you may want to cover:
+Example running:
 
-* Ruby version
+Running `bundle exec rake db:migrate` attached to terminal... up, run.9697
+Migrating to CreateArrests (20140925034256)
+== 20140925034256 CreateArrests: migrating ====================================
+-- create_table(:arrests)
+   -> 0.0540s
+== 20140925034256 CreateArrests: migrated (0.0544s) ===========================
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+~/code/arrest:master$ heroku run bundle exec rake arrests:seed_arrests
+Running `bundle exec rake arrests:seed_arrests` attached to terminal... up, run.5744
+~/code/arrest:master$ 
