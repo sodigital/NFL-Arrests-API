@@ -33,9 +33,9 @@ $(function(){
 
     function fetchQueryResults(q){
        if(q == ''){
-         var url = "http://sd.dev:3007/query"
+         var url = "/query"
        } else {
-        var url =  "http://sd.dev:3007/query?q="+q
+        var url =  "/query?q="+q
        }
       $.get(url , function( data ) {    
         renderResults(data)
