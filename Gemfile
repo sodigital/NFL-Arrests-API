@@ -44,3 +44,7 @@ gem 'spring',        group: :development
 gem 'httparty'
 gem 'slim'
 gem 'heroku'
+
+group :production do
+  gem 'rails_12factor'
+end
