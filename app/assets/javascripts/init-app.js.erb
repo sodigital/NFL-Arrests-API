@@ -32,11 +32,24 @@ $(function(){
 
 
     function fetchQueryResults(q){
-     
+
+         var s = window.location.origin;
+         if (s.indexOf(".dev") > -1) {
+           //this is dev
+           var base =  "http://sd.dev:3007/"
+            //this is prod
+         } else {
+           var base =  "/"
+         }
+
+
+
+
+
        if(q == ''){
-         var url = "<%= ENV['api_root_url'] %>http://sd.dev:3007/query"
+         var url = base+"query"
        } else {
-        var url =  "http://sd.dev:3007/query?q="+q
+        var url =  "query?q="+q
        }
 
       $.get(url , function( data ) {    
