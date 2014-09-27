@@ -1,3 +1,5 @@
+demo: http://rocky-island-3022.herokuapp.com/
+
 To get up to speed you need to
 
 1) db:migrate
