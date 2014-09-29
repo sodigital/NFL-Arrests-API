@@ -1,12 +1,13 @@
 $(function(){
 
-  $( ".typeahead" ).keyup(function() {
-    var term = $(this).val();
-     fetchQueryResults(  term  )
-     if (term){
-       history.pushState({id: null}, '', '#'+term.replace(" ","-"));
-     } 
-  });
+    $( ".typeahead" ).keyup(function() {
+      var term = $(this).val();
+       fetchQueryResults(  term  )
+       if (term){
+
+         history.pushState({id: null}, '', '#'+term.replace(new RegExp(" ", "g"), '-'))
+       } 
+    });
 
 
 
@@ -58,6 +59,7 @@ $(function(){
 
   function initEvents(){
     $("#myTable").tablesorter(); 
+
   }  
 
   if(window.location.hash) {
