@@ -1,0 +1,43 @@
+ <%
+    team_and_count = Arrests.all.map{|x| x.team}.inject(Hash.new(0)) { |total, e| total[e] += 1 ;total}.sort_by {|_key, value| value}.reverse
+
+    doughnutData = []
+    team_and_count.each_with_index do |x,i|
+      _rand_color = i % 2 == 0 ? "#1C3667" : "#B52126"
+      doughnutData << {
+        value: x[1],
+        color: _rand_color,
+        highlight: "#EEE",
+        label: x[0]
+      }
+    end
+%>
+ 
+
+
+
+
+
+<div class="container">
+  <div id="canvas-holder">
+    <canvas id="chart-area" width="150" height="150"/>
+  </div>
+</div>
+
+  <script>
+    var doughnutData = <%=  raw(doughnutData.to_json)     %>;
+   
+
+      window.onload = function(){
+        var ctx = document.getElementById("chart-area").getContext("2d");
+        window.myDoughnut = new Chart(ctx).Doughnut(doughnutData, {responsive : true});
+      };
+      
+
+
+
+  </script>
+  </body>
+</html>
+
+
