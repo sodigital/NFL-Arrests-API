@@ -5,6 +5,7 @@ blue
 red
 B52126
 */
+
 body {
   margin-bottom: 100px;
   color: #999;
@@ -19,11 +20,6 @@ a {
 a:hover{
   color: #b00;
 }
-
-/*.table-striped > tbody > tr:nth-child(2n+1) > td, .table-striped > tbody > tr:nth-child(2n+1) > th {
-   background-color: #B52126;
-}*/
-
 
 
 
@@ -101,7 +97,6 @@ span.tag {
   color: white;
 }
 
-,
 .black-wrapper {
   background: #1C3667;
 }
@@ -117,5 +112,4 @@ span.tag {
 
 td.notes {
   line-height: 11px !important;
-}
 }
