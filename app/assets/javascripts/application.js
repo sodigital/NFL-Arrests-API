@@ -13,4 +13,4 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-// = require handlebars-1.0.rc.1.min
+//= require handlebars-1.0.rc.1.min
