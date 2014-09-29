@@ -1,12 +1,36 @@
+/*
+blue
+1C3667
 
+red
+B52126
+*/
 body {
   margin-bottom: 100px;
+  color: #999;
+  background: #EEE;
 }
+
+a {
+  margin-left:5px;
+  color: #B52126;
+  text-decoration:underline;
+}
+a:hover{
+  color: #b00;
+}
+
+/*.table-striped > tbody > tr:nth-child(2n+1) > td, .table-striped > tbody > tr:nth-child(2n+1) > th {
+   background-color: #B52126;
+}*/
+
+
+
 
 th {
   cursor: pointer;
 }
-
+th.header {text-transform: uppercase;}
 th.headerSortDown {
   cursor: pointer;
   color:white;
@@ -17,8 +41,13 @@ th.headerSortDown {
   display: none;
   height: 66px;
   width:500px;
-  text-indent: 10px;
+  text-indent: 25px;
   margin-top: 25px;
+  color: #000;
+  font-weight: bold;
+  border-radius: 129px;
+  border:1px solid #1C3667;
+  outline: none;
 }
 
 .retina-logo {
@@ -47,7 +76,7 @@ span.tag {
 .nav ul li { list-style: none;display: inline;margin-right:50px;}
 .nav .active-nav {
   text-decoration: underline;
-  color:#CCC;
+  /*color:#CCC;*/
 }
 
 
@@ -64,16 +93,29 @@ span.tag {
 .disclaimer {
   font-size: 10px;
   color:#666;  
+  float:right;
 }
 
-.black-bg {
+.black-bg{
   background: black;
   color: white;
 }
 
+,
+.black-wrapper {
+  background: #1C3667;
+}
 .small-font {
   font-size:11px;
-  color: #666;
-  
+  color: #FFF;
+
 }
  
+.results-count {
+  font-size: 2em;
+}
+
+td.notes {
+  line-height: 11px !important;
+}
+}

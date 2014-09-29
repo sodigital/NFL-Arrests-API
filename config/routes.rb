@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   root 'welcome#index'
   get '/nfl_arrests_api' => 'welcome#nfl_arrests_api'
   get '/query' => 'welcome#query'
-
+  get '/by_team' => 'welcome#by_team'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

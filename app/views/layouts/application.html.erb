@@ -2,6 +2,8 @@
 <html>
 <head>
   <title>Arrest</title>
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+  
   <%= stylesheet_link_tag    'http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css', 'data-turbolinks-track' => true %>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
@@ -10,9 +12,11 @@
 </head>
 <body>
 
-  <div class="container">
-    <%= render "layouts/nav" %>
-  </div> <!-- container -->
+  <div class="black-wrapper">
+    <div class="container">
+      <%= render "layouts/nav" %>
+    </div> <!-- container -->
+  </div>
 
  <%= yield %> 
 </body>

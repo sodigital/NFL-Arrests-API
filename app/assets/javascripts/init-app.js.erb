@@ -1,80 +1,76 @@
 $(function(){
 
-
-
-  if (window.location.pathname == "/") {
-      $( ".typeahead" ).keyup(function() {
-        var term = $(this).val();
-         fetchQueryResults(  term  )
-         if (term){
-           history.pushState({id: null}, '', '#'+term.replace(" ","-"));
-         } 
-      });
+  $( ".typeahead" ).keyup(function() {
+    var term = $(this).val();
+     fetchQueryResults(  term  )
+     if (term){
+       history.pushState({id: null}, '', '#'+term.replace(" ","-"));
+     } 
+  });
 
 
 
-    function renderResults(payload){
-      var source   = $("#some-template").html();
-      var template = Handlebars.compile(source);
-      $("#content-placeholder").html(template(payload));
-      $( ".typeahead" ).fadeIn()
-      initEvents()
+  function renderResults(payload){
+    var source   = $("#some-template").html();
+    var template = Handlebars.compile(source);
+    $("#content-placeholder").html(template(payload));
+    $( ".typeahead" ).fadeIn()
+    initEvents()
 
-      // if (   $(".headerSortDown").length < 1 || $(".headerSortUp").length < 1  ) {
-      //   $(".black-bg").removeClass("black-bg")
-      //   $(".header").eq(0).addClass("black-bg")
-      // } else {
-      //   alert("as")
-      // }
-
-
-    }
+    // if (   $(".headerSortDown").length < 1 || $(".headerSortUp").length < 1  ) {
+    //   $(".black-bg").removeClass("black-bg")
+    //   $(".header").eq(0).addClass("black-bg")
+    // } else {
+    //   alert("as")
+    // }
 
 
-    function fetchQueryResults(q){
-
-         var s = window.location.origin;
-         if (s.indexOf(".dev") > -1) {
-           //this is dev
-           var base =  "http://sd.dev:3007/"
-            //this is prod
-         } else {
-           var base =  "/"
-         }
+  }
 
 
+  function fetchQueryResults(q){
 
-
-
-       if(q == ''){
-         var url = base+"query"
+       var s = window.location.origin;
+       if (s.indexOf(".dev") > -1) {
+         //this is dev
+         var base =  "http://sd.dev:3007/"
+          //this is prod
        } else {
-        var url =  "query?q="+q
+         var base =  "/"
        }
 
-      $.get(url , function( data ) {    
-        renderResults(data)
-      });
-    
-    }  
-
-
-    function initEvents(){
-      $("#myTable").tablesorter(); 
-
-    }  
-
-    if(window.location.hash) {
-      var param = window.location.hash.replace("#","")
-      $('.typeahead').val(param)
-      fetchQueryResults(param)
-    } else {
-      fetchQueryResults("")
-    }
 
 
 
- 
-  }//end if check on path
+
+     if(q == ''){
+       var url = base+"query"
+     } else {
+      var url =  "query?q="+q
+     }
+
+    $.get(url , function( data ) {    
+      renderResults(data)
+    });
+  
+  }  
+
+
+  function initEvents(){
+    $("#myTable").tablesorter(); 
+  }  
+
+  if(window.location.hash) {
+    var param = window.location.hash.replace("#","")
+    $('.typeahead').val(param)
+    fetchQueryResults(param)
+  } else {
+    fetchQueryResults("")
+  }
+
+
+
+  $(".header").eq(0).click();
+
 
 }); 
