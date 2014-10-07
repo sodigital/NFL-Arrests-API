@@ -6,7 +6,7 @@ class WelcomeController < ApplicationController
 
   def query
     injection = params[:q]
-    @arrests  = Arrests.where(" (team LIKE '%#{injection}%' OR name LIKE '%#{injection}%' OR pos LIKE '%#{injection}%' OR arest_or_charge LIKE '%#{injection}%' OR category LIKE '%#{injection}%' OR description LIKE '%#{injection}%'  OR outcome LIKE '%#{injection}%')")
+    @arrests  = Arrests.where(" (team ilike '%#{injection}%' OR name ilike '%#{injection}%' OR pos ilike '%#{injection}%' OR arest_or_charge ilike '%#{injection}%' OR category ilike '%#{injection}%' OR description ilike '%#{injection}%'  OR outcome ilike '%#{injection}%')")
 
     render json: {
         records: @arrests,
