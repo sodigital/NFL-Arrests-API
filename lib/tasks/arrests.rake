@@ -33,6 +33,9 @@ namespace :arrests do
     _file   =  File.read("public/data.json")
     json = JSON.parse(_file) 
    
+    #kill the db lol this is sketchy and stupid
+    Arrests.delete_all 
+    #
     json.each do |x|
       # d = Date.strptime(x["DATE"], "%m/%d/%y")
       Arrests.create date: x["DATE"],  team: x["TEAM"], name: x["NAME"], pos: x["POS"], arest_or_charge: x["CASE"], category: x["CATEGORY"], description: x["DESCRIPTION"], outcome: x["OUTCOME"]
