@@ -1,13 +1,44 @@
 $(function(){
+//setup before functions
+var typingTimer,                 
+    doneTypingInterval = 100,
+    $typeAhead         = $( ".typeahead" );
 
-    $( ".typeahead" ).keyup(function() {
-      var term = $(this).val();
-       fetchQueryResults(  term  )
-       if (term){
 
-         history.pushState({id: null}, '', '#'+term.replace(new RegExp(" ", "g"), '-'))
-       } 
-    });
+//on keyup, start the countdown
+$typeAhead .keyup(function(){
+    clearTimeout(typingTimer);
+    if ($typeAhead .val) {
+        typingTimer = setTimeout(doneTyping, doneTypingInterval);
+    }
+});
+
+//user is "finished typing," do something
+function doneTyping () {
+  var term = $typeAhead .val();
+  fetchQueryResults(  term  )
+  if (term){
+   history.pushState({id: null}, '', '#'+term.replace(new RegExp(" ", "g"), '-'))
+  } 
+}
+
+
+ 
+
+
+
+
+ 
+
+
+    // $( ".typeahead" ).keyup(function() {
+    //   var term = $(this).val();
+    //    fetchQueryResults(  term  )
+    //    if (term){
+
+    //      history.pushState({id: null}, '', '#'+term.replace(new RegExp(" ", "g"), '-'))
+    //    } 
+    // });
 
 
 
