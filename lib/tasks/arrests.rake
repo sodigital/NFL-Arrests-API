@@ -2,7 +2,7 @@ namespace :arrests do
   desc "Seeds all arrest records from http://www.usatoday.com/sports/nfl/arrests"
   task seed_arrests: :environment do
    
-
+    # WHY so bad
     #THIS UPDATES the data.json file son
     url         = "https://api.import.io/store/data/5f33633c-54b7-41c7-971b-9f89770d6db2/_query?input/webpage/url=http%3A%2F%2Fwww.usatoday.com%2Fsports%2Fnfl%2Farrests%2F&_user=4a81e225-02b6-463b-917c-bfa29f7b35cc&_apikey=LyRLBLd8zhqPc0D%2B7NB6eH971W3Y5iHRv2h0OLkwC5fl4pS24XxmmoGXFhaVJ0xHwayELHxZrhGSc2vWM%2FZ3eg%3D%3D" 
     data        = HTTParty.get(url) 
