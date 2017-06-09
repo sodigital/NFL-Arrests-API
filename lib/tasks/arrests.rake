@@ -4,7 +4,7 @@ namespace :arrests do
    
     # WHY so bad
     #THIS UPDATES the data.json file son
-    url         = "https://api.import.io/store/data/5f33633c-54b7-41c7-971b-9f89770d6db2/_query?input/webpage/url=http%3A%2F%2Fwww.usatoday.com%2Fsports%2Fnfl%2Farrests%2F&_user=4a81e225-02b6-463b-917c-bfa29f7b35cc&_apikey=LyRLBLd8zhqPc0D%2B7NB6eH971W3Y5iHRv2h0OLkwC5fl4pS24XxmmoGXFhaVJ0xHwayELHxZrhGSc2vWM%2FZ3eg%3D%3D" 
+    url         = "https://api.import.io/store/connector/a373c20d-1a7e-4854-8483-fd30d1934cdf/_query?input=webpage/url:http%3A%2F%2Fwww.usatoday.com%2Fsports%2Fnfl%2Farrests%2F&&_apikey=4a81e22502b6463b917cbfa29f7b35cc2f244b04b77cce1a8f7340feecd07a787f7bd56dd8e621d1bf687438b9300b97e5e294b6e17c669a8197161695274c47c1ac842c7c59ae1192736bd633f6777a" 
     data        = HTTParty.get(url) 
     results     = data["results"]
     new_results = []
