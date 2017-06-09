@@ -5,6 +5,7 @@ namespace :arrests do
     # WHY so bad
     #THIS UPDATES the data.json file son
     url         = "https://api.import.io/store/connector/a373c20d-1a7e-4854-8483-fd30d1934cdf/_query?input=webpage/url:http%3A%2F%2Fwww.usatoday.com%2Fsports%2Fnfl%2Farrests%2F&&_apikey=4a81e22502b6463b917cbfa29f7b35cc2f244b04b77cce1a8f7340feecd07a787f7bd56dd8e621d1bf687438b9300b97e5e294b6e17c669a8197161695274c47c1ac842c7c59ae1192736bd633f6777a" 
+    puts "WORKING"
     data        = HTTParty.get(url) 
     results     = data["results"]
     new_results = []
@@ -20,6 +21,7 @@ namespace :arrests do
       "outcome_text" => "OUTCOME"
     }
     results.each  do |r|
+      puts "in loop #{r}"
       newhash = Hash[r.map {|k, v| [key_matching[k], v] }]
       new_results << newhash
     end
