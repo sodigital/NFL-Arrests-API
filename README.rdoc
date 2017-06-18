@@ -1,4 +1,4 @@
-demo: http://rocky-island-3022.herokuapp.com/
+demo: http://radiant-river-62060.herokuapp.com/
 
 To get up to speed you need to
 
