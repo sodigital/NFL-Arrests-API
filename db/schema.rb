@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20140925034256) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "arrests", force: true do |t|
     t.date     "date"
     t.string   "team"
